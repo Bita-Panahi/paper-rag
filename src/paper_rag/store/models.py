@@ -11,6 +11,7 @@ class SearchFilters:
     year_max: int | None = None
     own_paper: bool | None = None
     file_name: str | None = None
+    file_names: tuple[str, ...] | None = None  # any of these papers
 
 
 @dataclass(frozen=True)

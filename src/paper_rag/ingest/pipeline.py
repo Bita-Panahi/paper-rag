@@ -1,7 +1,8 @@
 """The repeatable indexing pipeline: PDFs -> chunks -> embeddings -> vector store.
 
-Running it twice does no extra work. A paper is re-processed only when its content or the
-indexing settings (chunk size, overlap, embedding model) changed since it was stored.
+Running it twice does no extra work. A paper is re-processed only when its content, its
+metadata (year, own_paper) or the indexing settings (chunk size, overlap, embedding model)
+changed since it was stored.
 """
 
 import logging
@@ -29,9 +30,17 @@ class IngestReport:
     seconds: float = 0.0
 
 
-def make_fingerprint(sha256: str, *, chunk_size: int, overlap: int, model: str) -> str:
-    """Identifies exactly what was stored: file content plus the settings that shaped it."""
-    return f"{sha256}|{chunk_size}|{overlap}|{model}"
+def make_fingerprint(
+    sha256: str,
+    *,
+    chunk_size: int,
+    overlap: int,
+    model: str,
+    year: int | None = None,
+    own_paper: bool = False,
+) -> str:
+    """Identifies exactly what was stored: file content, metadata and the settings used."""
+    return f"{sha256}|{chunk_size}|{overlap}|{model}|{year}|{own_paper}"
 
 
 def index_directory(
@@ -52,8 +61,14 @@ def index_directory(
     for pdf in sorted(Path(pdf_dir).glob("*.pdf")):
         name = pdf.name
         try:
+            info = manifest.get(name, PaperInfo())
             fingerprint = make_fingerprint(
-                file_sha256(pdf), chunk_size=chunk_size, overlap=overlap, model=embedder.model
+                file_sha256(pdf),
+                chunk_size=chunk_size,
+                overlap=overlap,
+                model=embedder.model,
+                year=info.year,
+                own_paper=info.own_paper,
             )
             if not force and stored.get(name) == fingerprint:
                 report.skipped.append(name)
@@ -68,7 +83,6 @@ def index_directory(
                 continue
 
             result = embedder.embed([c.text for c in chunks])
-            info = manifest.get(name, PaperInfo())
 
             if name in stored:
                 store.delete_by_file_name(name)  # drop the old version before inserting the new

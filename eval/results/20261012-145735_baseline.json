@@ -1,0 +1,924 @@
+{
+  "label": "baseline",
+  "config": {
+    "top_k": 5,
+    "min_score": 0.3,
+    "chunk_size": 800,
+    "chunk_overlap": 100,
+    "collection": "papers",
+    "embedding_model": "text-embedding-3-small",
+    "chat_model": "gpt-4o-mini",
+    "with_answers": false
+  },
+  "summary": {
+    "questions": 18,
+    "pass_rate": 0.556,
+    "errors": 0,
+    "paper_hit_rate": 0.857,
+    "mean_context_recall": 0.631,
+    "refusal_accuracy": 0.5,
+    "total_cost_nok": 0.0001,
+    "latency_ms_p50": 244,
+    "latency_ms_p95": 2624
+  },
+  "results": [
+    {
+      "id": 1,
+      "question": "Which measurement tools are used in the CIC 2024 paper? Name them.",
+      "answerable": true,
+      "expected_files": [
+        "CIC_2024_7_Bita--Panahi.pdf"
+      ],
+      "retrieved_files": [
+        "Optics_Express.pdf",
+        "Optics_Express.pdf",
+        "Goniochromism of Multicolor and Interference Pigments Under Varying Illumination Conditions.pdf",
+        "Measuring and specifying goniochromatic colors.pdf",
+        "Optics_Express.pdf"
+      ],
+      "retrieved": [
+        {
+          "file": "Optics_Express.pdf",
+          "page": 4,
+          "score": 0.44
+        },
+        {
+          "file": "Optics_Express.pdf",
+          "page": 16,
+          "score": 0.437
+        },
+        {
+          "file": "Goniochromism of Multicolor and Interference Pigments Under Varying Illumination Conditions.pdf",
+          "page": 5,
+          "score": 0.431
+        },
+        {
+          "file": "Measuring and specifying goniochromatic colors.pdf",
+          "page": 3,
+          "score": 0.409
+        },
+        {
+          "file": "Optics_Express.pdf",
+          "page": 5,
+          "score": 0.409
+        }
+      ],
+      "missing_facts": [
+        "MA-T12",
+        "Canon SRA"
+      ],
+      "cited_expected": null,
+      "file_rank": null,
+      "context_recall": 0.0,
+      "answer_recall": null,
+      "answered": null,
+      "answer": "",
+      "passed": false,
+      "cost_nok": 3.4000000000000005e-06,
+      "total_ms": 2624.4107999991684,
+      "error": ""
+    },
+    {
+      "id": 2,
+      "question": "What is the BRDF model used in the CIC 2024 paper?",
+      "answerable": true,
+      "expected_files": [
+        "CIC_2024_7_Bita--Panahi.pdf"
+      ],
+      "retrieved_files": [
+        "CIC_2024_7_Bita--Panahi.pdf",
+        "Physically Based Neural Bidirectional Reflectance Distribution Function.pdf",
+        "A Compact Representation of Measured BRDFs Using Neural Processes.pdf",
+        "Empirical BRDF model for goniochromatic materials and soft proofing with reflective inks.pdf",
+        "CIC_2024_7_Bita--Panahi.pdf"
+      ],
+      "retrieved": [
+        {
+          "file": "CIC_2024_7_Bita--Panahi.pdf",
+          "page": 1,
+          "score": 0.697
+        },
+        {
+          "file": "Physically Based Neural Bidirectional Reflectance Distribution Function.pdf",
+          "page": 1,
+          "score": 0.691
+        },
+        {
+          "file": "A Compact Representation of Measured BRDFs Using Neural Processes.pdf",
+          "page": 1,
+          "score": 0.675
+        },
+        {
+          "file": "Empirical BRDF model for goniochromatic materials and soft proofing with reflective inks.pdf",
+          "page": 4,
+          "score": 0.67
+        },
+        {
+          "file": "CIC_2024_7_Bita--Panahi.pdf",
+          "page": 6,
+          "score": 0.668
+        }
+      ],
+      "missing_facts": [
+        "Cook-Torrance"
+      ],
+      "cited_expected": null,
+      "file_rank": 1,
+      "context_recall": 0.0,
+      "answer_recall": null,
+      "answered": null,
+      "answer": "",
+      "passed": false,
+      "cost_nok": 3.2e-06,
+      "total_ms": 195.61950000206707,
+      "error": ""
+    },
+    {
+      "id": 3,
+      "question": "What assumption is made about the spectrum at specular angles in the CIC 2024 paper?",
+      "answerable": true,
+      "expected_files": [
+        "CIC_2024_7_Bita--Panahi.pdf"
+      ],
+      "retrieved_files": [
+        "CIC_2024_7_Bita--Panahi.pdf",
+        "Optics_Express.pdf",
+        "CIC_2024_7_Bita--Panahi.pdf",
+        "Measuring and specifying goniochromatic colors.pdf",
+        "Angular and Spectral Bandwidth Considerations in BRDF Measurements of Interference- and Diffraction-Based Coatings.pdf"
+      ],
+      "retrieved": [
+        {
+          "file": "CIC_2024_7_Bita--Panahi.pdf",
+          "page": 3,
+          "score": 0.598
+        },
+        {
+          "file": "Optics_Express.pdf",
+          "page": 2,
+          "score": 0.567
+        },
+        {
+          "file": "CIC_2024_7_Bita--Panahi.pdf",
+          "page": 3,
+          "score": 0.564
+        },
+        {
+          "file": "Measuring and specifying goniochromatic colors.pdf",
+          "page": 2,
+          "score": 0.552
+        },
+        {
+          "file": "Angular and Spectral Bandwidth Considerations in BRDF Measurements of Interference- and Diffraction-Based Coatings.pdf",
+          "page": 3,
+          "score": 0.551
+        }
+      ],
+      "missing_facts": [],
+      "cited_expected": null,
+      "file_rank": 1,
+      "context_recall": 1.0,
+      "answer_recall": null,
+      "answered": null,
+      "answer": "",
+      "passed": true,
+      "cost_nok": 3.8e-06,
+      "total_ms": 1656.1001000009128,
+      "error": ""
+    },
+    {
+      "id": 4,
+      "question": "What are the cost functions used in the CIC 2024 paper?",
+      "answerable": true,
+      "expected_files": [
+        "CIC_2024_7_Bita--Panahi.pdf"
+      ],
+      "retrieved_files": [
+        "CIC_2024_7_Bita--Panahi.pdf",
+        "CIC_2024_7_Bita--Panahi.pdf",
+        "Optics_Express.pdf",
+        "CIC_2024_7_Bita--Panahi.pdf",
+        "CIC_2024_7_Bita--Panahi.pdf"
+      ],
+      "retrieved": [
+        {
+          "file": "CIC_2024_7_Bita--Panahi.pdf",
+          "page": 4,
+          "score": 0.438
+        },
+        {
+          "file": "CIC_2024_7_Bita--Panahi.pdf",
+          "page": 6,
+          "score": 0.433
+        },
+        {
+          "file": "Optics_Express.pdf",
+          "page": 9,
+          "score": 0.432
+        },
+        {
+          "file": "CIC_2024_7_Bita--Panahi.pdf",
+          "page": 4,
+          "score": 0.427
+        },
+        {
+          "file": "CIC_2024_7_Bita--Panahi.pdf",
+          "page": 3,
+          "score": 0.408
+        }
+      ],
+      "missing_facts": [],
+      "cited_expected": null,
+      "file_rank": 1,
+      "context_recall": 1.0,
+      "answer_recall": null,
+      "answered": null,
+      "answer": "",
+      "passed": true,
+      "cost_nok": 3.0000000000000005e-06,
+      "total_ms": 259.612300000299,
+      "error": ""
+    },
+    {
+      "id": 5,
+      "question": "Which optimisation algorithm is used to fit the BRDF in the CIC 2024 paper?",
+      "answerable": true,
+      "expected_files": [
+        "CIC_2024_7_Bita--Panahi.pdf"
+      ],
+      "retrieved_files": [
+        "CIC_2024_7_Bita--Panahi.pdf",
+        "Optics_Express.pdf",
+        "CIC_2024_7_Bita--Panahi.pdf",
+        "CIC_2024_7_Bita--Panahi.pdf",
+        "A Compact Representation of Measured BRDFs Using Neural Processes.pdf"
+      ],
+      "retrieved": [
+        {
+          "file": "CIC_2024_7_Bita--Panahi.pdf",
+          "page": 3,
+          "score": 0.697
+        },
+        {
+          "file": "Optics_Express.pdf",
+          "page": 9,
+          "score": 0.677
+        },
+        {
+          "file": "CIC_2024_7_Bita--Panahi.pdf",
+          "page": 3,
+          "score": 0.672
+        },
+        {
+          "file": "CIC_2024_7_Bita--Panahi.pdf",
+          "page": 1,
+          "score": 0.668
+        },
+        {
+          "file": "A Compact Representation of Measured BRDFs Using Neural Processes.pdf",
+          "page": 1,
+          "score": 0.666
+        }
+      ],
+      "missing_facts": [],
+      "cited_expected": null,
+      "file_rank": 1,
+      "context_recall": 1.0,
+      "answer_recall": null,
+      "answered": null,
+      "answer": "",
+      "passed": true,
+      "cost_nok": 4.000000000000001e-06,
+      "total_ms": 195.82720000107656,
+      "error": ""
+    },
+    {
+      "id": 6,
+      "question": "What wavelength range and interval is used for the BRDF fitting in the CIC 2024 paper?",
+      "answerable": true,
+      "expected_files": [
+        "CIC_2024_7_Bita--Panahi.pdf"
+      ],
+      "retrieved_files": [
+        "Empirical BRDF model for goniochromatic materials and soft proofing with reflective inks.pdf",
+        "Angular and Spectral Bandwidth Considerations in BRDF Measurements of Interference- and Diffraction-Based Coatings.pdf",
+        "CIC_2024_7_Bita--Panahi.pdf",
+        "Empirical BRDF model for goniochromatic materials and soft proofing with reflective inks.pdf",
+        "CIC_2024_7_Bita--Panahi.pdf"
+      ],
+      "retrieved": [
+        {
+          "file": "Empirical BRDF model for goniochromatic materials and soft proofing with reflective inks.pdf",
+          "page": 4,
+          "score": 0.678
+        },
+        {
+          "file": "Angular and Spectral Bandwidth Considerations in BRDF Measurements of Interference- and Diffraction-Based Coatings.pdf",
+          "page": 4,
+          "score": 0.653
+        },
+        {
+          "file": "CIC_2024_7_Bita--Panahi.pdf",
+          "page": 3,
+          "score": 0.635
+        },
+        {
+          "file": "Empirical BRDF model for goniochromatic materials and soft proofing with reflective inks.pdf",
+          "page": 6,
+          "score": 0.633
+        },
+        {
+          "file": "CIC_2024_7_Bita--Panahi.pdf",
+          "page": 3,
+          "score": 0.633
+        }
+      ],
+      "missing_facts": [],
+      "cited_expected": null,
+      "file_rank": 3,
+      "context_recall": 1.0,
+      "answer_recall": null,
+      "answered": null,
+      "answer": "",
+      "passed": true,
+      "cost_nok": 4.2000000000000004e-06,
+      "total_ms": 255.20700000197394,
+      "error": ""
+    },
+    {
+      "id": 7,
+      "question": "What is the main contribution of the Optics Express paper?",
+      "answerable": true,
+      "expected_files": [
+        "Optics_Express.pdf"
+      ],
+      "retrieved_files": [
+        "Optics_Express.pdf",
+        "Optics_Express.pdf",
+        "Measuring and specifying goniochromatic colors.pdf",
+        "Measuring and specifying goniochromatic colors.pdf",
+        "Optics_Express.pdf"
+      ],
+      "retrieved": [
+        {
+          "file": "Optics_Express.pdf",
+          "page": 14,
+          "score": 0.464
+        },
+        {
+          "file": "Optics_Express.pdf",
+          "page": 2,
+          "score": 0.461
+        },
+        {
+          "file": "Measuring and specifying goniochromatic colors.pdf",
+          "page": 3,
+          "score": 0.446
+        },
+        {
+          "file": "Measuring and specifying goniochromatic colors.pdf",
+          "page": 2,
+          "score": 0.444
+        },
+        {
+          "file": "Optics_Express.pdf",
+          "page": 3,
+          "score": 0.439
+        }
+      ],
+      "missing_facts": [
+        "near-specular"
+      ],
+      "cited_expected": null,
+      "file_rank": 1,
+      "context_recall": 0.5,
+      "answer_recall": null,
+      "answered": null,
+      "answer": "",
+      "passed": false,
+      "cost_nok": 2.4000000000000003e-06,
+      "total_ms": 315.2345000016794,
+      "error": ""
+    },
+    {
+      "id": 8,
+      "question": "What is the BRDF model used in the Optics Express paper?",
+      "answerable": true,
+      "expected_files": [
+        "Optics_Express.pdf"
+      ],
+      "retrieved_files": [
+        "CIC_2024_7_Bita--Panahi.pdf",
+        "Empirical BRDF model for goniochromatic materials and soft proofing with reflective inks.pdf",
+        "Empirical BRDF model for goniochromatic materials and soft proofing with reflective inks.pdf",
+        "A Compact Representation of Measured BRDFs Using Neural Processes.pdf",
+        "Physically Based Neural Bidirectional Reflectance Distribution Function.pdf"
+      ],
+      "retrieved": [
+        {
+          "file": "CIC_2024_7_Bita--Panahi.pdf",
+          "page": 1,
+          "score": 0.682
+        },
+        {
+          "file": "Empirical BRDF model for goniochromatic materials and soft proofing with reflective inks.pdf",
+          "page": 4,
+          "score": 0.666
+        },
+        {
+          "file": "Empirical BRDF model for goniochromatic materials and soft proofing with reflective inks.pdf",
+          "page": 4,
+          "score": 0.666
+        },
+        {
+          "file": "A Compact Representation of Measured BRDFs Using Neural Processes.pdf",
+          "page": 2,
+          "score": 0.663
+        },
+        {
+          "file": "Physically Based Neural Bidirectional Reflectance Distribution Function.pdf",
+          "page": 1,
+          "score": 0.663
+        }
+      ],
+      "missing_facts": [
+        "Torrance-Sparrow"
+      ],
+      "cited_expected": null,
+      "file_rank": null,
+      "context_recall": 0.0,
+      "answer_recall": null,
+      "answered": null,
+      "answer": "",
+      "passed": false,
+      "cost_nok": 2.8000000000000003e-06,
+      "total_ms": 318.10739999855286,
+      "error": ""
+    },
+    {
+      "id": 9,
+      "question": "What is the metric used in the Optics Express paper for representing goniochromatic properties?",
+      "answerable": true,
+      "expected_files": [
+        "Optics_Express.pdf"
+      ],
+      "retrieved_files": [
+        "Optics_Express.pdf",
+        "Optics_Express.pdf",
+        "Optics_Express.pdf",
+        "Optics_Express.pdf",
+        "Measuring and specifying goniochromatic colors.pdf"
+      ],
+      "retrieved": [
+        {
+          "file": "Optics_Express.pdf",
+          "page": 4,
+          "score": 0.625
+        },
+        {
+          "file": "Optics_Express.pdf",
+          "page": 1,
+          "score": 0.612
+        },
+        {
+          "file": "Optics_Express.pdf",
+          "page": 6,
+          "score": 0.605
+        },
+        {
+          "file": "Optics_Express.pdf",
+          "page": 2,
+          "score": 0.604
+        },
+        {
+          "file": "Measuring and specifying goniochromatic colors.pdf",
+          "page": 3,
+          "score": 0.59
+        }
+      ],
+      "missing_facts": [],
+      "cited_expected": null,
+      "file_rank": 1,
+      "context_recall": 1.0,
+      "answer_recall": null,
+      "answered": null,
+      "answer": "",
+      "passed": true,
+      "cost_nok": 3.8e-06,
+      "total_ms": 207.26849999846308,
+      "error": ""
+    },
+    {
+      "id": 10,
+      "question": "What is the cost function used in the Optics Express paper?",
+      "answerable": true,
+      "expected_files": [
+        "Optics_Express.pdf"
+      ],
+      "retrieved_files": [
+        "Optics_Express.pdf",
+        "CIC_2024_7_Bita--Panahi.pdf",
+        "CIC_2024_7_Bita--Panahi.pdf",
+        "Optics_Express.pdf",
+        "An Analysis of Goniochromatic and Sparkle Effects on Multi-Layered Materials.pdf"
+      ],
+      "retrieved": [
+        {
+          "file": "Optics_Express.pdf",
+          "page": 9,
+          "score": 0.533
+        },
+        {
+          "file": "CIC_2024_7_Bita--Panahi.pdf",
+          "page": 2,
+          "score": 0.519
+        },
+        {
+          "file": "CIC_2024_7_Bita--Panahi.pdf",
+          "page": 4,
+          "score": 0.491
+        },
+        {
+          "file": "Optics_Express.pdf",
+          "page": 9,
+          "score": 0.482
+        },
+        {
+          "file": "An Analysis of Goniochromatic and Sparkle Effects on Multi-Layered Materials.pdf",
+          "page": 4,
+          "score": 0.481
+        }
+      ],
+      "missing_facts": [],
+      "cited_expected": null,
+      "file_rank": 1,
+      "context_recall": 1.0,
+      "answer_recall": null,
+      "answered": null,
+      "answer": "",
+      "passed": true,
+      "cost_nok": 2.6e-06,
+      "total_ms": 281.6477999986091,
+      "error": ""
+    },
+    {
+      "id": 11,
+      "question": "What are the model parameters used in the Optics Express paper?",
+      "answerable": true,
+      "expected_files": [
+        "Optics_Express.pdf"
+      ],
+      "retrieved_files": [
+        "Optics_Express.pdf",
+        "Optics_Express.pdf",
+        "Optics_Express.pdf",
+        "Optics_Express.pdf",
+        "An Analysis of Goniochromatic and Sparkle Effects on Multi-Layered Materials.pdf"
+      ],
+      "retrieved": [
+        {
+          "file": "Optics_Express.pdf",
+          "page": 10,
+          "score": 0.539
+        },
+        {
+          "file": "Optics_Express.pdf",
+          "page": 3,
+          "score": 0.536
+        },
+        {
+          "file": "Optics_Express.pdf",
+          "page": 12,
+          "score": 0.518
+        },
+        {
+          "file": "Optics_Express.pdf",
+          "page": 3,
+          "score": 0.516
+        },
+        {
+          "file": "An Analysis of Goniochromatic and Sparkle Effects on Multi-Layered Materials.pdf",
+          "page": 9,
+          "score": 0.515
+        }
+      ],
+      "missing_facts": [
+        "roughness",
+        "index of refraction",
+        "specular coefficient"
+      ],
+      "cited_expected": null,
+      "file_rank": 1,
+      "context_recall": 0.0,
+      "answer_recall": null,
+      "answered": null,
+      "answer": "",
+      "passed": false,
+      "cost_nok": 2.6e-06,
+      "total_ms": 159.22430000136956,
+      "error": ""
+    },
+    {
+      "id": 12,
+      "question": "What is the correlation between MCDM and the color difference in the Optics Express paper?",
+      "answerable": true,
+      "expected_files": [
+        "Optics_Express.pdf"
+      ],
+      "retrieved_files": [
+        "Optics_Express.pdf",
+        "Optics_Express.pdf",
+        "Optics_Express.pdf",
+        "Optics_Express.pdf",
+        "Optics_Express.pdf"
+      ],
+      "retrieved": [
+        {
+          "file": "Optics_Express.pdf",
+          "page": 14,
+          "score": 0.686
+        },
+        {
+          "file": "Optics_Express.pdf",
+          "page": 14,
+          "score": 0.681
+        },
+        {
+          "file": "Optics_Express.pdf",
+          "page": 15,
+          "score": 0.646
+        },
+        {
+          "file": "Optics_Express.pdf",
+          "page": 5,
+          "score": 0.617
+        },
+        {
+          "file": "Optics_Express.pdf",
+          "page": 5,
+          "score": 0.582
+        }
+      ],
+      "missing_facts": [
+        "highly correlated",
+        "larger color differences"
+      ],
+      "cited_expected": null,
+      "file_rank": 1,
+      "context_recall": 0.3333333333333333,
+      "answer_recall": null,
+      "answered": null,
+      "answer": "",
+      "passed": false,
+      "cost_nok": 3.8e-06,
+      "total_ms": 197.1674999986135,
+      "error": ""
+    },
+    {
+      "id": 13,
+      "question": "Which dataset is used in the Hypernetworks for Generalizable BRDF Representation paper?",
+      "answerable": true,
+      "expected_files": [
+        "Hypernetworks for Generalizable BRDF Representation.pdf"
+      ],
+      "retrieved_files": [
+        "Hypernetworks for Generalizable BRDF Representation.pdf",
+        "Hypernetworks for Generalizable BRDF Representation.pdf",
+        "Hypernetworks for Generalizable BRDF Representation.pdf",
+        "Hypernetworks for Generalizable BRDF Representation.pdf",
+        "Hypernetworks for Generalizable BRDF Representation.pdf"
+      ],
+      "retrieved": [
+        {
+          "file": "Hypernetworks for Generalizable BRDF Representation.pdf",
+          "page": 4,
+          "score": 0.739
+        },
+        {
+          "file": "Hypernetworks for Generalizable BRDF Representation.pdf",
+          "page": 1,
+          "score": 0.727
+        },
+        {
+          "file": "Hypernetworks for Generalizable BRDF Representation.pdf",
+          "page": 5,
+          "score": 0.725
+        },
+        {
+          "file": "Hypernetworks for Generalizable BRDF Representation.pdf",
+          "page": 11,
+          "score": 0.705
+        },
+        {
+          "file": "Hypernetworks for Generalizable BRDF Representation.pdf",
+          "page": 9,
+          "score": 0.7
+        }
+      ],
+      "missing_facts": [],
+      "cited_expected": null,
+      "file_rank": 1,
+      "context_recall": 1.0,
+      "answer_recall": null,
+      "answered": null,
+      "answer": "",
+      "passed": true,
+      "cost_nok": 3.4000000000000005e-06,
+      "total_ms": 243.78600000272854,
+      "error": ""
+    },
+    {
+      "id": 14,
+      "question": "Which metric is used in the A compact Representation of Measured BRDFs Using Neural Processes paper to compare the rendered and measured BRDFs?",
+      "answerable": true,
+      "expected_files": [
+        "A Compact Representation of Measured BRDFs Using Neural Processes.pdf"
+      ],
+      "retrieved_files": [
+        "A Compact Representation of Measured BRDFs Using Neural Processes.pdf",
+        "A Compact Representation of Measured BRDFs Using Neural Processes.pdf",
+        "A Compact Representation of Measured BRDFs Using Neural Processes.pdf",
+        "A Compact Representation of Measured BRDFs Using Neural Processes.pdf",
+        "A Compact Representation of Measured BRDFs Using Neural Processes.pdf"
+      ],
+      "retrieved": [
+        {
+          "file": "A Compact Representation of Measured BRDFs Using Neural Processes.pdf",
+          "page": 8,
+          "score": 0.734
+        },
+        {
+          "file": "A Compact Representation of Measured BRDFs Using Neural Processes.pdf",
+          "page": 1,
+          "score": 0.715
+        },
+        {
+          "file": "A Compact Representation of Measured BRDFs Using Neural Processes.pdf",
+          "page": 2,
+          "score": 0.704
+        },
+        {
+          "file": "A Compact Representation of Measured BRDFs Using Neural Processes.pdf",
+          "page": 10,
+          "score": 0.699
+        },
+        {
+          "file": "A Compact Representation of Measured BRDFs Using Neural Processes.pdf",
+          "page": 1,
+          "score": 0.693
+        }
+      ],
+      "missing_facts": [],
+      "cited_expected": null,
+      "file_rank": 1,
+      "context_recall": 1.0,
+      "answer_recall": null,
+      "answered": null,
+      "answer": "",
+      "passed": true,
+      "cost_nok": 5.8e-06,
+      "total_ms": 185.70109999927809,
+      "error": ""
+    },
+    {
+      "id": 15,
+      "question": "How many samples from the MERL database are used in the Optics Express paper?",
+      "answerable": false,
+      "expected_files": [],
+      "retrieved_files": [
+        "Neural BRDF Representation and Importance Sampling.pdf",
+        "Hypernetworks for Generalizable BRDF Representation.pdf",
+        "Physically Based Neural Bidirectional Reflectance Distribution Function.pdf",
+        "Hypernetworks for Generalizable BRDF Representation.pdf",
+        "Neural BRDF Representation and Importance Sampling.pdf"
+      ],
+      "retrieved": [
+        {
+          "file": "Neural BRDF Representation and Importance Sampling.pdf",
+          "page": 4,
+          "score": 0.555
+        },
+        {
+          "file": "Hypernetworks for Generalizable BRDF Representation.pdf",
+          "page": 8,
+          "score": 0.521
+        },
+        {
+          "file": "Physically Based Neural Bidirectional Reflectance Distribution Function.pdf",
+          "page": 4,
+          "score": 0.511
+        },
+        {
+          "file": "Hypernetworks for Generalizable BRDF Representation.pdf",
+          "page": 8,
+          "score": 0.504
+        },
+        {
+          "file": "Neural BRDF Representation and Importance Sampling.pdf",
+          "page": 4,
+          "score": 0.492
+        }
+      ],
+      "missing_facts": [],
+      "cited_expected": null,
+      "file_rank": null,
+      "context_recall": null,
+      "answer_recall": null,
+      "answered": null,
+      "answer": "",
+      "passed": false,
+      "cost_nok": 3.4000000000000005e-06,
+      "total_ms": 208.7428999984695,
+      "error": ""
+    },
+    {
+      "id": 16,
+      "question": "What is the capital of Norway in the CIC 2024 paper?",
+      "answerable": false,
+      "expected_files": [],
+      "retrieved_files": [],
+      "retrieved": [],
+      "missing_facts": [],
+      "cited_expected": null,
+      "file_rank": null,
+      "context_recall": null,
+      "answer_recall": null,
+      "answered": null,
+      "answer": "",
+      "passed": true,
+      "cost_nok": 3.0000000000000005e-06,
+      "total_ms": 309.35459999818704,
+      "error": ""
+    },
+    {
+      "id": 17,
+      "question": "What GPU was used for training in the CIC 2024 paper?",
+      "answerable": false,
+      "expected_files": [],
+      "retrieved_files": [
+        "Neural BRDF Importance Sampling by Reparameterization.pdf",
+        "An Analysis of Goniochromatic and Sparkle Effects on Multi-Layered Materials.pdf",
+        "Neural Appearance Modeling From Single Images.pdf",
+        "Neural BRDF Importance Sampling by Reparameterization.pdf",
+        "Neural Appearance Modeling From Single Images.pdf"
+      ],
+      "retrieved": [
+        {
+          "file": "Neural BRDF Importance Sampling by Reparameterization.pdf",
+          "page": 6,
+          "score": 0.47
+        },
+        {
+          "file": "An Analysis of Goniochromatic and Sparkle Effects on Multi-Layered Materials.pdf",
+          "page": 5,
+          "score": 0.446
+        },
+        {
+          "file": "Neural Appearance Modeling From Single Images.pdf",
+          "page": 7,
+          "score": 0.424
+        },
+        {
+          "file": "Neural BRDF Importance Sampling by Reparameterization.pdf",
+          "page": 6,
+          "score": 0.41
+        },
+        {
+          "file": "Neural Appearance Modeling From Single Images.pdf",
+          "page": 10,
+          "score": 0.406
+        }
+      ],
+      "missing_facts": [],
+      "cited_expected": null,
+      "file_rank": null,
+      "context_recall": null,
+      "answer_recall": null,
+      "answered": null,
+      "answer": "",
+      "passed": false,
+      "cost_nok": 3.0000000000000005e-06,
+      "total_ms": 229.5827999987523,
+      "error": ""
+    },
+    {
+      "id": 18,
+      "question": "What is the capital of Australia?",
+      "answerable": false,
+      "expected_files": [],
+      "retrieved_files": [],
+      "retrieved": [],
+      "missing_facts": [],
+      "cited_expected": null,
+      "file_rank": null,
+      "context_recall": null,
+      "answer_recall": null,
+      "answered": null,
+      "answer": "",
+      "passed": true,
+      "cost_nok": 1.4000000000000001e-06,
+      "total_ms": 270.9250999978394,
+      "error": ""
+    }
+  ]
+}

@@ -41,6 +41,12 @@ def to_qdrant_filter(filters: SearchFilters | None) -> models.Filter | None:
         must.append(
             models.FieldCondition(key="file_name", match=models.MatchValue(value=filters.file_name))
         )
+    if filters.file_names:
+        must.append(
+            models.FieldCondition(
+                key="file_name", match=models.MatchAny(any=list(filters.file_names))
+            )
+        )
     return models.Filter(must=must) if must else None
 
 

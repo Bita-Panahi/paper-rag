@@ -12,6 +12,7 @@ from paper_rag.ingest.models import Chunk, ParsedDocument
 
 _SENTENCE_SPLIT = re.compile(r"(?<=[.!?])\s+(?=[A-Z0-9\[(])")
 
+
 @dataclass(frozen=True)
 class _Segment:
     page: int
@@ -80,14 +81,14 @@ def chunk_document(doc: ParsedDocument, chunk_size: int = 800, overlap: int = 10
 
     current: list[_Segment] = []
     for segment in _segments(doc, chunk_size):
-        if current and len(_joined(current + [segment])) > chunk_size:
+        if current and len(_joined([*current, segment])) > chunk_size:
             emit(current)
             carry: list[_Segment] = []
             for previous in reversed(current):
-                if len(_joined([previous] + carry)) > overlap:
+                if len(_joined([previous, *carry])) > overlap:
                     break
                 carry.insert(0, previous)
-            while carry and len(_joined(carry + [segment])) > chunk_size:
+            while carry and len(_joined([*carry, segment])) > chunk_size:
                 carry.pop(0)
             current = carry
         current.append(segment)

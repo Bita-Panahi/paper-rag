@@ -1,16 +1,16 @@
-file_name,title,year,own_paper
-A Compact Representation of Measured BRDFs Using Neural Processes.pdf,A Compact Representation of Measured BRDFs Using Neural Processes,2021,
-An Analysis of Goniochromatic and Sparkle Effects on Multi-Layered Materials.pdf,An Analysis of Goniochromatic and Sparkle Effects on Multi-Layered Materials,2022,
-Angular and Spectral Bandwidth Considerations in BRDF Measurements of Interference- and Diffraction-Based Coatings.pdf,Angular and Spectral Bandwidth Considerations in BRDF Measurements of Interference- and Diffraction-Based Coatings,2020,
-CIC_2024_7_Bita--Panahi.pdf,Estimating Spectral BRDF Parameters Using Handheld Devices,2024,true
-Empirical BRDF model for goniochromatic materials and soft proofing with reflective inks.pdf,Empirical BRDF model for goniochromatic materials and soft proofing with reflective inks,2024,
-FreNBRDF- A FREQUENCY-RECTIFIED NEURAL MATERIAL REPRESENTATION.pdf,FreNBRDF: A Frequency-Rectified Neural Material Representation,2025,
-Goniochromism of Multicolor and Interference Pigments Under Varying Illumination Conditions.pdf,Goniochromism of Multicolor and Interference Pigments Under Varying Illumination Conditions,2026,
-Hypernetworks for Generalizable BRDF Representation.pdf,Hypernetworks for Generalizable BRDF Representation,2024,
-Measuring and specifying goniochromatic colors.pdf,Measuring and specifying goniochromatic colors,2014,
-Neural Appearance Modeling From Single Images.pdf,Neural Appearance Modeling From Single Images,2024,
-Neural BRDF Importance Sampling by Reparameterization.pdf,Neural BRDF Importance Sampling by Reparameterization,2025,
-Neural BRDF Representation and Importance Sampling.pdf,Neural BRDF Representation and Importance Sampling,2021,
-Optics_Express.pdf,Modeling specular goniochromatic materials using near-specular and diffuse reflectance,2025,true
-Physically Based Neural Bidirectional Reflectance Distribution Function.pdf,Physically Based Neural Bidirectional Reflectance Distribution Function,2024,
-Wavelet Encoding of BRDFs for Real-Time Rendering.pdf,Wavelet Encoding of BRDFs for Real-Time Rendering,2007,
+file_name,title,year,own_paper,aliases
+A Compact Representation of Measured BRDFs Using Neural Processes.pdf,A Compact Representation of Measured BRDFs Using Neural Processes,2021,,measured BRDFs; neural processes
+An Analysis of Goniochromatic and Sparkle Effects on Multi-Layered Materials.pdf,An Analysis of Goniochromatic and Sparkle Effects on Multi-Layered Materials,2022,,goniochromatic; sparkle; multi-layered materials
+Angular and Spectral Bandwidth Considerations in BRDF Measurements of Interference- and Diffraction-Based Coatings.pdf,Angular and Spectral Bandwidth Considerations in BRDF Measurements of Interference- and Diffraction-Based Coatings,2020,,angular; spectral; bandwidth; BRDF measurements; interference; diffraction-based coatings
+CIC_2024_7_Bita--Panahi.pdf,Estimating Spectral BRDF Parameters Using Handheld Devices,2024,true,CIC 2024 paper; CIC 2024
+Empirical BRDF model for goniochromatic materials and soft proofing with reflective inks.pdf,Empirical BRDF model for goniochromatic materials and soft proofing with reflective inks,2024,,soft proofing; reflective inks;empirical BRDF model
+FreNBRDF- A FREQUENCY-RECTIFIED NEURAL MATERIAL REPRESENTATION.pdf,FreNBRDF: A Frequency-Rectified Neural Material Representation,2025,,frenbrdf; frequency-rectified; neural material representation
+Goniochromism of Multicolor and Interference Pigments Under Varying Illumination Conditions.pdf,Goniochromism of Multicolor and Interference Pigments Under Varying Illumination Conditions,2026,,goniochromism; multicolor; interference pigments; varying illumination conditions
+Hypernetworks for Generalizable BRDF Representation.pdf,Hypernetworks for Generalizable BRDF Representation,2024,,hypernetworks; generalizable BRDF representation
+Measuring and specifying goniochromatic colors.pdf,Measuring and specifying goniochromatic colors,2014,,measuring; specifying; goniochromatic colors
+Neural Appearance Modeling From Single Images.pdf,Neural Appearance Modeling From Single Images,2024,,neural appearance modeling; single images
+Neural BRDF Importance Sampling by Reparameterization.pdf,Neural BRDF Importance Sampling by Reparameterization,2025,,importance sampling; reparameterization
+Neural BRDF Representation and Importance Sampling.pdf,Neural BRDF Representation and Importance Sampling,2021,,neural BRDF; representation
+Optics_Express.pdf,Modeling specular goniochromatic materials using near-specular and diffuse reflectance,2025,true,optics express paper; optics express
+Physically Based Neural Bidirectional Reflectance Distribution Function.pdf,Physically Based Neural Bidirectional Reflectance Distribution Function,2024,,physically based; neural; bidirectional reflectance distribution function
+Wavelet Encoding of BRDFs for Real-Time Rendering.pdf,Wavelet Encoding of BRDFs for Real-Time Rendering,2007,,wavelet encoding; BRDFs; real-time rendering

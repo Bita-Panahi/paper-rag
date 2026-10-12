@@ -1,0 +1,18 @@
+question,expected_file,must_contain,answerable
+Which measurement tools are used in the CIC 2024 paper? Name them.,CIC_2024_7_Bita--Panahi.pdf,MA-T12; RA-532H,yes
+What is the BRDF model used in the CIC 2024 paper?,CIC_2024_7_Bita--Panahi.pdf,Cook-Torrance,yes
+What assumption is made about the spectrum at specular angles in the CIC 2024 paper?,CIC_2024_7_Bita--Panahi.pdf,spectral power; flat,yes
+What are the cost functions used in the CIC 2024 paper?,CIC_2024_7_Bita--Panahi.pdf,Cosine-weighted RMSE; Cube root cosine weighted RMSE; M2,yes
+Which optimisation algorithm is used to fit the BRDF in the CIC 2024 paper?,CIC_2024_7_Bita--Panahi.pdf,Genetic Algorithm,yes
+What wavelength range and interval is used for the BRDF fitting in the CIC 2024 paper?,CIC_2024_7_Bita--Panahi.pdf,400; 700; 10 nm,yes
+What is the main contribution of the Optics Express paper?,Optics_Express.pdf,near-specular; diffuse,yes
+What is the metric used in the Optics Express paper for representing goniochromatic properties?,Optics_Express.pdf,MCDM,yes
+What is the cost function used in the Optics Express paper?,Optics_Express.pdf,CWRMSE,yes
+What are the model parameters used in the Optics Express paper?,Optics_Express.pdf,roughness; surface roughness; index of refraction; spectral coefficient; spectral reflectance,yes
+What is the correlation between MCDM and the color difference in the Optics Express paper?,Optics_Express.pdf,highly correlated; larger color differences; correlation coefficient; 0.79; 0.0021,yes
+Which dataset is used in the Hypernetworks for Generalizable BRDF Representation paper?,Hypernetworks for Generalizable BRDF Representation.pdf,MERL; RGL,yes
+Which metric is used in the A compact Representation of Measured BRDFs Using Neural Processes paper to compare the rendered and measured BRDFs?,A Compact Representation of Measured BRDFs Using Neural Processes.pdf,PSNR,yes
+How many samples from the MERL database are used in the Optics Express paper?,,,no
+What is the capital of Norway in the CIC 2024 paper?,,,no
+What GPU was used for training in the CIC 2024 paper?,,,no
+What is the capital of Australia?,,,no

@@ -106,3 +106,15 @@ def test_broken_and_empty_pdfs_are_reported_without_stopping_the_run(tmp_path, m
     assert sorted(report.indexed) == ["coating.pdf", "neural.pdf"]
     assert set(report.failed) == {"broken.pdf", "blank.pdf"}
     assert "no extractable text" in report.failed["blank.pdf"]
+
+
+def test_changing_metadata_triggers_reindex(tmp_path, make_pdf):
+    store, embedder = setup(tmp_path, make_pdf)
+    run(tmp_path, store, embedder)
+
+    corrected = {**MANIFEST, "neural.pdf": PaperInfo(2025, False)}  # you fixed a year in the CSV
+    report = index_directory(tmp_path, store, embedder, manifest=corrected, **SETTINGS)
+
+    assert report.updated == ["neural.pdf"] and report.skipped == ["coating.pdf"]
+    hits = store.search(embedder.embed(["neural"]).vectors[0], 20, SearchFilters(year_min=2025))
+    assert hits and {h.file_name for h in hits} == {"neural.pdf"}

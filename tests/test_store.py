@@ -123,3 +123,13 @@ def test_empty_store_is_handled():
 def test_vector_size_mismatch_is_reported(store):
     with pytest.raises(ValueError, match="size 64"):
         store.ensure_collection(1536)
+
+
+def test_filter_on_several_file_names():
+    s = QdrantStore.in_memory()
+    for name in ("a.pdf", "b.pdf", "c.pdf"):
+        add(s, name, ["goniochromatic coatings measured at many angles"], year=2020, own=False)
+    hits = s.search(
+        EMBED.embed(["coatings"]).vectors[0], 10, SearchFilters(file_names=("a.pdf", "c.pdf"))
+    )
+    assert {h.file_name for h in hits} == {"a.pdf", "c.pdf"}

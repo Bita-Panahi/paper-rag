@@ -1,6 +1,6 @@
 import pytest
 
-from paper_rag.ingest.manifest import ManifestError, PaperInfo, load_manifest
+from paper_rag.ingest.manifest import ManifestError, load_manifest
 
 
 def write(tmp_path, text):
@@ -15,8 +15,8 @@ def test_reads_year_and_own_paper(tmp_path):
         'file_name,title,year,own_paper\na.pdf,Title A,2024,true\nb.pdf,"Title, with comma",,\n',
     )
     manifest = load_manifest(path)
-    assert manifest["a.pdf"] == PaperInfo(year=2024, own_paper=True)
-    assert manifest["b.pdf"] == PaperInfo(year=None, own_paper=False)
+    assert manifest["a.pdf"].year == 2024 and manifest["a.pdf"].own_paper
+    assert manifest["b.pdf"].year is None and not manifest["b.pdf"].own_paper
 
 
 def test_missing_file_gives_empty_manifest(tmp_path):
@@ -35,3 +35,17 @@ def test_bad_year_fails_loudly(tmp_path, bad_year):
     path = write(tmp_path, f"file_name,title,year,own_paper\na.pdf,T,{bad_year},\n")
     with pytest.raises(ManifestError):
         load_manifest(path)
+
+
+def test_title_and_aliases_are_read(tmp_path):
+    path = tmp_path / "papers.csv"
+    path.write_text(
+        "file_name,title,year,own_paper,aliases\n"
+        'a.pdf,Some Title,2024,true,"CIC 2024; Panahi paper|handheld"\n'
+        "b.pdf,,,,\n",
+        encoding="utf-8",
+    )
+    manifest = load_manifest(path)
+    assert manifest["a.pdf"].title == "Some Title"
+    assert manifest["a.pdf"].aliases == ("CIC 2024", "Panahi paper", "handheld")
+    assert manifest["b.pdf"].aliases == ()

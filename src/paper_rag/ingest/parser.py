@@ -28,7 +28,7 @@ def _page_blocks(page: pymupdf.Page, margin_ratio: float) -> list[str]:
     top_limit = height * margin_ratio
     bottom_limit = height * (1 - margin_ratio)
     blocks: list[str] = []
-    for x0, y0, x1, y1, text, _block_no, block_type in page.get_text("blocks"):
+    for _x0, y0, _x1, y1, text, _block_no, block_type in page.get_text("blocks"):
         if block_type != 0:  # 0 = text, 1 = image
             continue
         if y1 <= top_limit or y0 >= bottom_limit:  # lies entirely in the header/footer band
