@@ -8,7 +8,7 @@ What wavelength range and interval is used for the BRDF fitting in the CIC 2024 
 What is the main contribution of the Optics Express paper?,Optics_Express.pdf,near-specular; diffuse,yes
 What is the metric used in the Optics Express paper for representing goniochromatic properties?,Optics_Express.pdf,MCDM,yes
 What is the cost function used in the Optics Express paper?,Optics_Express.pdf,CWRMSE,yes
-What are the model parameters used in the Optics Express paper?,Optics_Express.pdf,roughness; surface roughness; index of refraction; spectral coefficient; spectral reflectance,yes
+What are the model parameters used in the Optics Express paper?,Optics_Express.pdf,roughness; surface roughness; spectral coefficient; spectral reflectance,yes
 What is the correlation between MCDM and the color difference in the Optics Express paper?,Optics_Express.pdf,highly correlated; larger color differences; correlation coefficient; 0.79; 0.0021,yes
 Which dataset is used in the Hypernetworks for Generalizable BRDF Representation paper?,Hypernetworks for Generalizable BRDF Representation.pdf,MERL; RGL,yes
 Which metric is used in the A compact Representation of Measured BRDFs Using Neural Processes paper to compare the rendered and measured BRDFs?,A Compact Representation of Measured BRDFs Using Neural Processes.pdf,PSNR,yes
