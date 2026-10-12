@@ -25,7 +25,6 @@ def test_chunks_respect_size_and_overlap():
     chunks = chunk_document(doc, chunk_size=300, overlap=80)
     assert len(chunks) > 3
     assert all(len(c.text) <= 300 for c in chunks)
-    # consecutive chunks share their boundary sentence(s)
     for a, b in pairwise(chunks):
         last_sentence = a.text.split(". ")[-1]
         assert last_sentence in b.text

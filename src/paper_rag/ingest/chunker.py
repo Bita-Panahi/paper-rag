@@ -12,7 +12,6 @@ from paper_rag.ingest.models import Chunk, ParsedDocument
 
 _SENTENCE_SPLIT = re.compile(r"(?<=[.!?])\s+(?=[A-Z0-9\[(])")
 
-
 @dataclass(frozen=True)
 class _Segment:
     page: int
