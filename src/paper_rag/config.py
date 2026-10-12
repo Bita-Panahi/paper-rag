@@ -20,6 +20,11 @@ class Settings(BaseSettings):
     chunk_overlap: int = 100
     top_k: int = 5
 
+    embedding_batch_size: int = 64
+    # List prices, used only for the cost estimate printed after indexing.
+    embedding_price_per_million_usd: float = 0.02
+    usd_to_nok: float = 10.0
+
 
 @lru_cache
 def get_settings() -> Settings:
